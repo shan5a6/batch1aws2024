@@ -1,20 +1,14 @@
 pipeline {
   agent any 
   stages {
-    stage('working with loops') {
+    stage('working with conditions') {
       steps {
         script {
-					for (i=1;i<=10 ;i++ ) {
-						println "my i value is ${i}"
+					i=1
+					while (i <=10) {
+						println "i value is ${i}"
+						i=i+1
 					}
-					//jenkins code
-					lis1=[10,20,30,40]
-					for (element in lis1) {
-						println "my element is ${element}"
-					}
-					//	python 
-					// for i in lis1:
-					// 	print(i)
         }
       }
     }
